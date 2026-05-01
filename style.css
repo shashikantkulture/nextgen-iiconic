@@ -1166,14 +1166,22 @@ img {
 
 .registration-form {
     text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
 }
 
 .registration-form input,
-.registration-form select {
+.registration-form select,
+.registration-form textarea {
     width: 100%;
     padding: 15px 20px;
     background: rgba(0,0,0,0.5);
@@ -1185,8 +1193,14 @@ img {
     transition: var(--transition-smooth);
 }
 
+.registration-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
 .registration-form input:focus,
-.registration-form select:focus {
+.registration-form select:focus,
+.registration-form textarea:focus {
     outline: none;
     border-color: var(--clr-primary-gold);
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
@@ -1401,6 +1415,10 @@ img {
     .music-toggle {
         bottom: 20px;
         left: 20px;
+    }
+    
+    .registration-form {
+        grid-template-columns: 1fr;
     }
 }
 

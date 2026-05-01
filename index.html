@@ -406,20 +406,48 @@
                         <input type="text" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="number" placeholder="Age" min="16" max="60" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Category Applying For</option>
+                            <option value="miss">Miss</option>
+                            <option value="mr">Mr</option>
+                            <option value="mrs">Mrs</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <input type="tel" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
+                        <input type="text" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Height (e.g., 5'7&quot; or 170cm)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="url" placeholder="Instagram Profile Link">
+                    </div>
+                    <div class="form-group full-width">
                         <select required>
-                            <option value="" disabled selected>Select Category</option>
-                            <option value="miss">Miss India</option>
-                            <option value="mr">Mr India</option>
-                            <option value="mrs">Mrs India</option>
+                            <option value="" disabled selected>Have you participated in any pageant before?</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn-primary full-width cta-submit">Submit Application</button>
+                    <div class="form-group full-width">
+                        <textarea placeholder="Why do you want to participate in this pageant?" required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary full-width cta-submit">Submit Application</button>
+                    </div>
                 </form>
             </div>
         </div>
