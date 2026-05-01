@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Scroll Reveal Animation for elements
     const elementsToAnimate = document.querySelectorAll(
-        '.section-heading, .lead-text, .about-text, .about-image-grid, .timeline-item, .slider-item, .pricing-card, .exp-card, .team-card, .finale-content, .contact-card'
+        '.section-heading, .lead-text, .about-text, .about-image-grid, .timeline-item, .slider-item, .pricing-card, .exp-card, .team-card, .finale-content, .contact-card, .vision-content > p'
     );
     
     elementsToAnimate.forEach((el, index) => {
