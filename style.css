@@ -1125,11 +1125,16 @@ img {
 }
 
 .cta-box {
-    max-width: 600px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 50px;
     position: relative;
     z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+    text-align: left;
 }
 
 .cta-heading {
@@ -1416,9 +1421,14 @@ img {
         bottom: 20px;
         left: 20px;
     }
-    
     .registration-form {
         grid-template-columns: 1fr;
+    }
+    
+    .cta-box {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        text-align: center;
     }
 }
 
