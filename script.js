@@ -4,8 +4,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Sticky Navbar
+    // 1. Sticky Navbar & Awards Switcher
     const navbar = document.getElementById('navbar');
+    const awardsDropdown = document.getElementById('awards-dropdown-main');
+
+    if (awardsDropdown) {
+        awardsDropdown.addEventListener('change', () => {
+            window.location.href = awardsDropdown.value;
+        });
+    }
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -121,24 +128,46 @@ document.addEventListener('DOMContentLoaded', () => {
     if (regForm) {
         regForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // In a real app, send data to server
             const btn = regForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             btn.style.opacity = '0.8';
+            btn.disabled = true;
             
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
-                btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
-                regForm.reset();
-                
+            // Collect form data
+            const formData = new FormData(regForm);
+            const action = regForm.getAttribute('action');
+            
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
+                    btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
+                    regForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Submission Failed';
+                btn.style.background = 'linear-gradient(135deg, #ff4b2b, #ff416c)';
+            })
+            .finally(() => {
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
+                    btn.disabled = false;
+                }, 4000);
+            });
         });
     }
 
