@@ -113,14 +113,19 @@
           <div class="w-embed">
             <div class="awards-switcher">
               <select id="awards-dropdown">
-                <option value="https://eventexawards.com" selected>
+                <option value="/nextgen-iiconic/index.html" selected>
                   Nextgen Leader
                 </option>
-                <option value="#">
+                <option value="/nextgen-iiconic/iiconic/index.html">
                   Nextgen IICONIC
                 </option>
               </select>
             </div>
+            <script>
+              document.getElementById('awards-dropdown').addEventListener('change', function() {
+                window.location.href = this.value;
+              });
+            </script>
             <style>
               .awards-switcher { position: relative; display: inline-block; }
               #awards-dropdown {
@@ -153,6 +158,8 @@
           </a>
           <nav role="navigation" class="evx-navbar-menu w-nav-menu">
             <div class="evx-nav-links-container">
+              <a href="/nextgen-iiconic/index.html" class="evx-nav-link w-nav-link">Home</a>
+              <a href="/nextgen-iiconic/iiconic/index.html" class="evx-nav-link w-nav-link">Nextgen IICONIC</a>
             </div>
           </nav>
         </div>
