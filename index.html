@@ -25,19 +25,25 @@
     <div id="particles-js"></div>
 
     <!-- Upper Nav / Awards Switcher -->
-    <div class="evx-upper-nav">
-        <div class="container flex-row-just">
-            <div class="awards-switcher">
-                <select id="awards-dropdown-main">
-                    <option value="leader/index.html">Nextgen Leader</option>
-                    <option value="index.html" selected>Nextgen IICONIC</option>
+    <div class="evx-upper-nav" style="background-color: #6600ca; color: white; padding: 10px 0; font-size: 0.85rem; position: fixed; top: 0; width: 100%; z-index: 2000; font-family: 'Montserrat', sans-serif;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1200px; margin: 0 auto;">
+            <div class="awards-switcher" style="position: relative; display: inline-block;">
+                <select id="awards-dropdown-main" style="appearance: none; -webkit-appearance: none; background: transparent; color: white; border: 1px solid white; border-radius: 4px; padding: 4px 25px 4px 10px; font-size: 0.75rem; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="leader/index.html" style="background-color: #6600ca; color: white;">Nextgen Leader</option>
+                    <option value="index.html" selected style="background-color: #6600ca; color: white;">Nextgen IICONIC</option>
                 </select>
+                <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.6rem;">▼</span>
             </div>
-            <div class="update-info">
-                <span class="update-badge">Update</span>
-                <span class="update-text">Renaissanz Nextgen Leader Award Edition 5 featuring Ekta Kapoor</span>
+            <div class="update-info" style="display: flex; align-items: center;">
+                <span class="update-badge" style="background-color: #ff0055; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin-right: 10px;">Update</span>
+                <span class="update-text" style="font-weight: 500;">Renaissanz Nextgen Leader Award Edition 5 featuring Ekta Kapoor</span>
             </div>
         </div>
+        <script>
+            document.getElementById('awards-dropdown-main').addEventListener('change', function() {
+                window.location.href = this.value;
+            });
+        </script>
     </div>
 
     <!-- Sticky Navbar -->

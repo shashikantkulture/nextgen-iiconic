@@ -185,55 +185,6 @@ img {
 /* =========================================
    NAVIGATION
    ========================================= */
-.evx-upper-nav {
-    background-color: #6600ca;
-    color: white;
-    padding: 10px 0;
-    font-size: 0.85rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1100;
-    font-family: var(--font-body);
-}
-
-.flex-row-just {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#awards-dropdown-main {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 4px;
-    padding: 4px 12px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    outline: none;
-}
-
-#awards-dropdown-main option {
-    background-color: #6600ca;
-    color: white;
-}
-
-.update-badge {
-    background-color: #ff0055;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    margin-right: 10px;
-}
-
-.update-text {
-    font-weight: 500;
-}
-
 .navbar {
     position: fixed;
     top: 45px; /* Height of upper nav */
