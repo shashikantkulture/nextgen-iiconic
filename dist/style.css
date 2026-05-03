@@ -1390,16 +1390,33 @@ img {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        grid-template-columns: 1fr auto 1fr;
+        width: 95%;
+        padding: 0 10px;
+    }
+    
     .nav-links {
         display: none;
     }
     
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
     }
     
     .nav-action {
-        display: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .header-logo {
+        height: 55px; /* Slightly smaller on mobile */
+    }
+    
+    .btn-primary-sm {
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
     
     .title {
