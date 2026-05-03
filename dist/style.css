@@ -214,7 +214,7 @@ img {
 }
 
 .header-logo {
-    height: 90px; /* Increased from 70px to match button prominence */
+    height: 130px; /* Substantially increased to meet user's "big" requirement */
     width: auto;
     display: block;
     transition: var(--transition-smooth);
@@ -1419,7 +1419,7 @@ img {
     }
     
     .header-logo {
-        height: 80px; /* Increased from 65px */
+        height: 110px; /* Substantially increased on mobile */
     }
     
     .btn-primary-sm {
