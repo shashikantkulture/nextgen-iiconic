@@ -151,6 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
                     btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
                     regForm.reset();
+                    
+                    // Redirect to Razorpay after a short delay
+                    setTimeout(() => {
+                        window.location.href = "https://razorpay.me/@sammranaissance";
+                    }, 1500);
                 } else {
                     throw new Error('Form submission failed');
                 }
