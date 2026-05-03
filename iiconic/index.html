@@ -32,7 +32,7 @@
             <div class="awards-switcher" style="position: relative; display: inline-block;">
                 <select id="awards-dropdown-main"
                     style="appearance: none; -webkit-appearance: none; background: transparent; color: white; border: 1px solid white; border-radius: 4px; padding: 4px 25px 4px 10px; font-size: 0.75rem; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="nextgen/index.html" style="background-color: #6a0dad; color: white;">Nextgen Leader
+                    <option value="../index.html" style="background-color: #6a0dad; color: white;">Nextgen Leader
                     </option>
                     <option value="index.html" selected style="background-color: #6a0dad; color: white;">Nextgen IICONIC
                     </option>
@@ -47,6 +47,16 @@
                     Ekta Kapoor</span>
             </div>
         </div>
+        <style>
+            @media (max-width: 600px) {
+                .evx-upper-nav .update-info {
+                    display: none !important;
+                }
+                .evx-upper-nav .container {
+                    justify-content: center !important;
+                }
+            }
+        </style>
         <script>
             document.getElementById('awards-dropdown-main').addEventListener('change', function () {
                 window.location.href = this.value;
@@ -56,9 +66,23 @@
 
     <!-- Sticky Navbar -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container" style="justify-content: flex-end;">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo_web.png" alt="NEXTGEN IICONIC" class="header-logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#auditions">Auditions</a></li>
+                <li><a href="#team">Expert Panel</a></li>
+            </ul>
+
             <div class="nav-action">
                 <a href="#apply" class="btn-primary-sm">Apply Now</a>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
