@@ -220,7 +220,7 @@ img {
 }
 
 .header-logo {
-    height: 70px; /* Increased from 55px (approx 25%+) */
+    height: 90px; /* Increased from 70px to match button prominence */
     width: auto;
     display: block;
     transition: var(--transition-smooth);
@@ -1425,7 +1425,7 @@ img {
     }
     
     .header-logo {
-        height: 65px; /* Increased from 55px */
+        height: 80px; /* Increased from 65px */
     }
     
     .btn-primary-sm {
